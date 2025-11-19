@@ -3,9 +3,7 @@ package dao;
 import java.util.List;
 import dto.Vuelo;
 
-/**
- * DAO concreto para Vuelo, usa Persistencia<T> para serializar la lista.
- */
+
 public class VueloDAO extends Persistencia<Vuelo> implements ICrud {
 
     public VueloDAO(String archivo) {
@@ -23,7 +21,7 @@ public class VueloDAO extends Persistencia<Vuelo> implements ICrud {
 
     @Override
     public Object leer(Object object) {
-        // Soporta lectura por indice (Integer) o por referencia (Vuelo)
+
         if (object instanceof Integer) {
             int idx = (Integer) object;
             if (idx >= 0 && idx < lista.size()) return lista.get(idx);
@@ -61,3 +59,4 @@ public class VueloDAO extends Persistencia<Vuelo> implements ICrud {
         return lista;
     }
 }
+
