@@ -16,7 +16,7 @@ protected Asiento[][] asiento;
     /**
      * Crea un nuevo vuelo y genera sus asientos automaticamente.
      * @param filas cantidad de filas (debe ser > 0).
-     * @param asientosPorFila cantidad de asientos por fila (debe estar entre 1 y 26).
+     * @param asientosPorFila cantidad de asientos por fila (debe ser entre 1 y 26).
      */
     public Vuelo(int filas, int asientosPorFila) {
         if (filas <= 0 || filas > MAX_FILAS) {
@@ -29,7 +29,7 @@ protected Asiento[][] asiento;
         generarAsientos(filas, asientosPorFila);
     }
 
-    /**
+    /** METODO generar Asientos
      * Genera asientos en orden 1A, 1B, ... nE.
      */
     private void generarAsientos(int filas, int asientosPorFila) {
@@ -48,3 +48,4 @@ protected Asiento[][] asiento;
 
 
 }
+
